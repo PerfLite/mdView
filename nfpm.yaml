@@ -1,0 +1,15 @@
+name: mdview
+arch: amd64
+platform: linux
+version: 1.0.0
+description: Lightweight Markdown editor with live preview
+maintainer: bashakul
+license: MIT
+
+contents:
+  - src: build/bin/mdView
+    dst: /usr/bin/mdview
+  - src: icon_mdview.png
+    dst: /usr/share/icons/hicolor/256x256/apps/mdview.png
+  - src: mdview.desktop
+    dst: /usr/share/applications/mdview.desktop

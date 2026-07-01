@@ -1,0 +1,38 @@
+# Binaries
+build/bin/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Frontend
+frontend/dist/
+frontend/node_modules/
+frontend/.vite/
+
+# Wails
+frontend/wailsjs/go/
+frontend/wailsjs/runtime/
+
+# Config
+.config/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Packages
+*.deb
+*.AppImage
+AppDir/
+
+# Misc
+*.log
+tmp/
