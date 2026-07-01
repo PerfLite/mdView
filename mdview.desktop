@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=mdView
+Exec=/usr/bin/mdview %F
+Icon=/usr/share/icons/hicolor/256x256/apps/mdview.png
+Categories=Development;TextEditor;
+Comment=Lightweight Markdown editor with live preview
+MimeType=text/markdown;text/x-markdown;

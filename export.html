@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mdView Export</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'Nunito',sans-serif;max-width:800px;margin:2rem auto;padding:0 2rem;color:#e2e8f0;background:#0f172a;line-height:1.8}
+h1,h2,h3{color:#38bdf8;margin-top:1.5rem}
+h1{border-bottom:1px solid #334155;padding-bottom:.5rem}
+code{font-family:'JetBrains Mono',monospace;background:rgba(255,255,255,.06);padding:.15rem .4rem;border-radius:4px;font-size:.9em}
+pre{background:#1a1b26;border:1px solid #334155;border-radius:8px;padding:1rem;overflow-x:auto}
+pre code{background:none;padding:0;font-size:.85em;line-height:1.6}
+blockquote{border-left:3px solid #38bdf8;padding-left:1rem;color:#94a3b8;font-style:italic;margin:1rem 0}
+table{border-collapse:collapse;width:100%!;(string=<h1 id="mdview--markdown-previewer">mdView — Markdown Previewer</h1>
+<blockquote>
+<p>A lightweight, beautiful desktop Markdown editor built with <strong>Wails v2</strong>, <strong>Vue 3</strong>, and <strong>Go</strong>.</p>
+</blockquote>
+<h2 id="getting-started">Getting Started</h2>
+<p>This is a live-preview Markdown editor. Type on the left, see the rendered result on the right. The preview updates in real-time as you type.</p>
+<h2 id="text-formatting">Text Formatting</h2>
+<p>You can write <strong>bold</strong>, <em>italic</em>, <del>strikethrough</del>, and <code>inline code</code>.</p>
+<h3 id="lists">Lists</h3>
+<h4 id="unordered">Unordered</h4>
+<ul>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item
+<ul>
+<li>Nested item</li>
+<li>Another nested item</li>
+</ul>
+</li>
+</ul>
+<h4 id="ordered">Ordered</h4>
+<ol>
+<li>Step one</li>
+<li>Step two</li>
+<li>Step three</li>
+</ol>
+<h2 id="code-blocks">Code Blocks</h2>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;"><code><span style="display:flex;"><span><span style="color:#ff79c6">package</span> main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> <span style="color:#f1fa8c">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
+</span></span><span style="display:flex;"><span>    fmt.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Hello from mdView!&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;"><code><span style="display:flex;"><span><span style="color:#ff79c6">const</span> greet <span style="color:#ff79c6">=</span> (name) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">`Hello, </span><span style="color:#f1fa8c">${</span>name<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">!`</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>console.log(greet(<span style="color:#f1fa8c">&#34;World&#34;</span>));
+</span></span></code></pre><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;"><code><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">fibonacci</span>(n):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> n <span style="color:#ff79c6">&lt;=</span> <span style="color:#bd93f9">1</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> n
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> fibonacci(n <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>) <span style="color:#ff79c6">+</span> fibonacci(n <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(fibonacci(<span style="color:#bd93f9">10</span>))
+</span></span></code></pre><h2 id="tables">Tables</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Status</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Split View</td>
+<td>Done</td>
+<td>Resizable divider</td>
+</tr>
+<tr>
+<td>Live Preview</td>
+<td>Done</td>
+<td>300ms debounce</td>
+</tr>
+<tr>
+<td>Themes</td>
+<td>Done</td>
+<td>4 built-in themes</td>
+</tr>
+<tr>
+<td>Zoom</td>
+<td>Done</td>
+<td>Ctrl+Wheel or settings</td>
+</tr>
+<tr>
+<td>File Open/Save</td>
+<td>Done</td>
+<td>Native dialogs</td>
+</tr>
+<tr>
+<td>Syntax Highlight</td>
+<td>Done</td>
+<td>Goldmark + Chroma</td>
+</tr>
+<tr>
+<td>Line Numbers</td>
+<td>Done</td>
+<td>Editor gutter</td>
+</tr>
+<tr>
+<td>Search/Replace</td>
+<td>Done</td>
+<td>Ctrl+F</td>
+</tr>
+<tr>
+<td>Export HTML/PDF</td>
+<td>Done</td>
+<td>Toolbar buttons</td>
+</tr>
+<tr>
+<td>Auto-save</td>
+<td>Done</td>
+<td>Periodic temp save</td>
+</tr>
+<tr>
+<td>Image Paste</td>
+<td>Done</td>
+<td>Paste or drag images</td>
+</tr>
+<tr>
+<td>Drag &amp; Drop</td>
+<td>Done</td>
+<td>Drop .md files</td>
+</tr>
+</tbody>
+</table>
+<h2 id="blockquotes">Blockquotes</h2>
+<blockquote>
+<p>&quot;The best way to predict the future is to invent it.&quot;
+— Alan Kay</p>
+</blockquote>
+<h2 id="links--images">Links &amp; Images</h2>
+<p>Check out <a href="https://wails.io">Wails</a> for building desktop apps with Go and web technologies.</p>
+<h2 id="horizontal-rule">Horizontal Rule</h2>
+<hr>
+<h2 id="task-list">Task List</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Set up project with Wails v2</li>
+<li><input checked="" disabled="" type="checkbox"> Implement Markdown rendering with goldmark</li>
+<li><input checked="" disabled="" type="checkbox"> Build split-view editor UI</li>
+<li><input checked="" disabled="" type="checkbox"> Add theming system</li>
+<li><input checked="" disabled="" type="checkbox"> Add zoom, scroll lock, line numbers</li>
+<li><input checked="" disabled="" type="checkbox"> Add search/replace</li>
+<li><input checked="" disabled="" type="checkbox"> Add export HTML/PDF</li>
+<li><input checked="" disabled="" type="checkbox"> Add auto-save</li>
+<li><input checked="" disabled="" type="checkbox"> Add image paste/drag</li>
+</ul>
+<hr>
+<p><em>End of test document. Use Ctrl+S to save, Ctrl+O to open, Ctrl+F to search, F11 for fullscreen.</em></p>
+)margin:1rem 0}
+th,td{border:1px solid #334155;padding:.6rem .8rem;text-align:left}
+th{background:rgba(255,255,255,.05);font-weight:600}
+a{color:#38bdf8}
+img{max-width:100%;border-radius:8px}
+hr{border:none;border-top:1px solid #334155;margin:1.5rem 0}
+</style>
+</head>
+<body>
+%!s(MISSING)
+</body>
+</html>

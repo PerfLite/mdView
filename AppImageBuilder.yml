@@ -1,0 +1,18 @@
+version: 1
+AppDir:
+  path: AppDir
+  app_info:
+    id: com.bashakul.mdview
+    name: mdView
+    icon: icon_mdview.png
+    version: 1.0.0
+    exec: usr/bin/mdview
+  files:
+    include:
+      - build/bin/mdView:/usr/bin/mdview
+      - icon_mdview.png:/usr/share/icons/hicolor/256x256/apps/mdview.png
+      - mdview.desktop:/usr/share/applications/mdview.desktop
+AppImage:
+  arch: x86_64
+  update-information: None
+  sign-key: None
